@@ -1,0 +1,15 @@
+[project]
+name = "tp_math"
+description = "Fun Math Functions By Taj"
+version = "0.1.0"
+dependencies = [
+    "numpy",
+    "ray"
+]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+exclude = ["testing/*"]
