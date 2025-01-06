@@ -21,7 +21,7 @@ def generate_y_coordinates(a: float,
             return quadratic_curve(a, b, c, x)
         
 
-        tasks = [quadratic_curve_ray(x_i) for x_i in x_coords]
+        tasks = [quadratic_curve_ray.remote(x_i) for x_i in x_coords]
         results = ray.get(tasks)
         ray.shutdown()
         return results
